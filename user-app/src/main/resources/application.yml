@@ -1,0 +1,10 @@
+server:
+  port: 1235
+  servlet:
+    context-path: /
+spring:
+  application:
+    name: istio-user
+user:
+  username: test
+  password: test

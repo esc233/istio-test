@@ -1,0 +1,10 @@
+server:
+  port: 1234
+  servlet:
+    context-path: /
+spring:
+  application:
+    name: istio-gateway
+route:
+  user:
+    url: 127.0.0.1:1235
