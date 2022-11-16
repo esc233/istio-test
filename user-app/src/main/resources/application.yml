@@ -5,6 +5,15 @@ server:
 spring:
   application:
     name: istio-user
+  cloud:
+    polaris:
+      namespace: default # 配置注册命名空间
+      address: grpc://192.168.160.100:8091
+      discovery:
+        enabled: true
+      stat:
+        enabled: true
+        port: 28081
 user:
   username: test
   password: test

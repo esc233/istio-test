@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+import "google/api/annotations.proto";
+import "base.proto";
+
+package api.user.v1;
+
+option go_package = "mid/api/user/v1;v1";
+//option java_multiple_files = true;
+// java包名，下图中有体现
+option java_package = "api.user.v1";
+
+service UserService {
+  rpc login (LoginDTO) returns (ResultBody) {
+    option (google.api.http) = {
+      post: "/v1/login"
+      body: "*"
+    };
+  };
+}
+
+message LoginDTO {
+  string userName = 1;
+  string password = 2;
+}
+

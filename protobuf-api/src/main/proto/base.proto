@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+import "google/api/annotations.proto";
+package api.user.v1;
+
+message ResultBody {
+  string code = 1;
+  string msg = 2;
+  message body {};
+}
